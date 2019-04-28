@@ -24,7 +24,7 @@ class StudentsController < ApplicationController
   def update
     @student = Student.find(params[:id])
 
-    @student.update 
+    @student.update(post_params)
   end
 
 private
