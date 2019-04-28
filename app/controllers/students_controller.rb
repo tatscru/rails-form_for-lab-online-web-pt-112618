@@ -8,6 +8,9 @@ class StudentsController < ApplicationController
   end
 
   def create
+    @student = Student.new(post_params)
+    @student.save
+    redirect_to school_class_path(@school_class)
   end
 
   def show
