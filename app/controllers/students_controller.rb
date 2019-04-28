@@ -22,4 +22,8 @@ class StudentsController < ApplicationController
 
   def update
   end
+
+  def post_params
+    params.require(:student).permit(:first_name, :last_name)
+  end
 end
